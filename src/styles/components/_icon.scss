@@ -1,0 +1,10 @@
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order:-1;
+
+    @media only screen and (max-width: $screen-lg) {
+        display: none;
+    }
+}

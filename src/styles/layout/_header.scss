@@ -1,0 +1,24 @@
+.header{
+    grid-area: header;
+    align-self: end;
+    margin-bottom: 60px;
+    &__title{
+        font-size: 79px;
+        font-family: $font-pacifico-regular;
+        color: $title-color;
+        margin-bottom: 7px;
+        @media only screen and (max-width: $screen-sm) {
+            color: #fff;
+            text-align: center;
+        }
+    }
+    &__subtitle{
+        font-size: 27px;
+        font-family: $font-roboto-light;
+        color: $subtitle-color;
+        margin-left: 10px;
+        @media only screen and (max-width: $screen-sm) {
+            display: none;
+        }
+    }
+}

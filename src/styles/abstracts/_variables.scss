@@ -1,0 +1,42 @@
+
+//Fonts
+$font-roboto-regular: "Roboto-Regular";
+$font-roboto-light: "Roboto-Light";
+$font-monts-medium: "Montserrat-Medium";
+$font-monts-sbold: "Montserrat-SemiBold";
+$font-rambla-bold: "Rambla-Bold";
+$font-rambla-regular: "Rambla-Regular";
+$font-pacifico-regular: "Pacifico-Regular";
+$font-oswald-medium: "Oswald-Medium";
+
+//Colors
+$bg-color: #F6F7F8;
+//Text Colors
+$title-color: #8F5EBE;
+$subtitle-color: #A2A2A2;
+$desc-color: #C9C9C9;
+$placeholder-color: $desc-color;
+$button-text-color: #fff;
+//Components Colors
+$bg-task-color: #fff;
+$input-border-color: #979797;
+$button-first-color: #8F5EBE;
+$button-secound-color: #C63E7C;
+$button-disabled-color: #979797;
+$task-number-first-color: $button-first-color;
+$task-number-secound-color: $button-secound-color;
+$blob-first-color: $button-first-color;
+$blob-secound-color: $button-secound-color;
+//Scroll Color
+$scroll-color: #8F5EBE;
+$scroll-hover-color: #C63E7C;
+
+
+//Breakpoints
+$screen-xs: 414px !default;
+$screen-sm: 768px !default;
+$screen-md: 1024px !default;
+$screen-lg: 1200px !default;
+$screen-xl: 1360px !default;
+$screen-xxl: 1400px !default;
+$screen-full: 1600px !default;

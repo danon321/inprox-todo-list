@@ -1,28 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <Header :title="'Tasker'" :subtitle="'Task menager for everyone'" />
+      <Blob :position="'top'" />
+      <TodoList />
+    </div>
+    <Blob :position="'right'" />
+    <Blob :position="'left'" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from '@/components/Header.vue';
+import TodoList from '@/components/TodoList.vue';
+import Blob from '@/components/Blob.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    TodoList,
+    Blob
   }
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss" scoped>
+  @import "@/styles/layout/_app.scss";
 </style>
