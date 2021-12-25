@@ -13,7 +13,8 @@
                 <button class="button task__buttons--save" @click="editTask(index); editMode = false;">
                     <span class="button__text ">Save</span>
                 </button>
-                <button class="button task__buttons--remove" @click="$emit('removeTask')">
+                <button class="button task__buttons--remove" 
+                @click="$emit('removeTask', index), editMode = false;">
                     <span class="button__text">Remove</span>
                 </button>
             </div>

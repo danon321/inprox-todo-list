@@ -10,7 +10,7 @@
             :index="index" 
             v-for="(task, index) in tasks" 
             :key="index"
-            @removeTask="tasks.splice(index, 1)"
+            @removeTask="removeTask"
             @editTask="editTask" />
 
             <div class="icon">
@@ -40,6 +40,9 @@ export default {
     methods:{
         addTask(e){
             this.tasks.push(e);
+        },
+        removeTask(index){
+            this.tasks.splice(index, 1);
         },
         editTask(updatedTask,index){
             for(let propertie in updatedTask)
