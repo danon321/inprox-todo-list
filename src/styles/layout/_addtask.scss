@@ -2,7 +2,6 @@
 @import "../components/_button.scss";
 
 .addtask{
-    grid-area: addtask;
     max-width: 391px;
     padding: 70px 55px 90px 55px;
 
@@ -46,6 +45,7 @@
     &__container{
         display: flex;
         position: relative;
+        grid-area: addtask;
 
         @media only screen and (max-width: $screen-sm) {
             justify-content: center;

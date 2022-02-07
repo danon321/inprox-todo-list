@@ -113,7 +113,9 @@
         }
         &--save{
             border: #8F5EBE solid 1px;
+            background: #8F5EBE;
 
+            transition: background-color 0.5s;
             &:hover{
                 background: $bg-color;
                 img{

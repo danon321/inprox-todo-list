@@ -59,12 +59,13 @@
 
         @media only screen and (max-width: $screen-md) {
             display: flex;
-            margin: 0 -40px;
+            margin: 0 -55px;
         }
 
         .blob{
-            width: 100%;
+            width: 100vw;
             height: 225px;
+            margin-right: -20px;
             border-radius: 0% 0% 70% 30% / 40% 50% 60% 30%;
             animation: morph-top 11s linear infinite;
             background: transparent linear-gradient(90deg, #8F5EBE -150%, #D15B77 50%) 0% 0% no-repeat padding-box; 
