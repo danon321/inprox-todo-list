@@ -15,6 +15,9 @@
 
 .tasks{
     display: grid;
+    grid-template-areas: 
+        "... ... icon"
+        "... ... ...";
     grid-area: tasks;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -26,6 +29,7 @@
     }
 
     @media only screen and (max-width: $screen-lg) {
+        grid-template-areas: none;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         row-gap: 73px;
@@ -34,5 +38,9 @@
     @media only screen and (max-width: $screen-sm) {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+    }
+
+    & .icon{
+        grid-area: icon;
     }
 }

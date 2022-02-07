@@ -2,11 +2,20 @@
     grid-area: header;
     align-self: end;
     margin-bottom: 60px;
+
+    @media only screen and (max-width: $screen-md) {
+        align-self: start;
+    }
     &__title{
         font-size: 79px;
         font-family: $font-pacifico-regular;
         color: $title-color;
         margin-bottom: 7px;
+
+        @media only screen and (max-width: $screen-md) {
+            color: #fff;
+        }
+
         @media only screen and (max-width: $screen-sm) {
             color: #fff;
             text-align: center;
