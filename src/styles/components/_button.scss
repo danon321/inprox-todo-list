@@ -1,0 +1,18 @@
+.button{
+    display: block;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    background: transparent linear-gradient(112deg, $button-first-color 0%, $button-secound-color 100%) 0% 0% no-repeat padding-box;
+
+    &__text{
+        font-size: 15px;
+        color: $button-text-color;
+        font-family: $font-roboto-regular;
+    }
+    &.disabled{
+        cursor: default;
+        background: $button-disabled-color;
+    }
+}

@@ -1,0 +1,88 @@
+@import "../components/_card.scss";
+@import "../components/_button.scss";
+
+.addtask{
+    grid-area: addtask;
+    max-width: 391px;
+    padding: 70px 55px 90px 55px;
+
+    @media only screen and (max-width: $screen-lg) {
+        margin-bottom: 75px;
+        justify-self: center;
+    }
+
+    @media only screen and (max-width: $screen-sm) {
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+        padding-top: 75px;
+    }
+
+    &__title{
+        font-size: 36px;
+        font-family: $font-monts-sbold;
+        margin-bottom: 65px;
+        @media only screen and (max-width: $screen-sm) {
+            display: none;
+        }
+    }
+
+    &__input,
+    &__textarea{
+        @media only screen and (max-width: $screen-sm) {
+            background: transparent;
+        }
+    }
+
+    &__textarea{
+        height: 145px;
+    }
+
+    &__button{
+        margin-top: 45px;
+        padding: 15px 105px;
+    }
+
+    &__container{
+        display: flex;
+        position: relative;
+
+        @media only screen and (max-width: $screen-sm) {
+            justify-content: center;
+        }
+
+        & .addtask-bg-card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 360px;
+            height: 588px;
+            transform: translate(50%, 5%);
+            z-index: -1;
+
+            @media only screen and (max-width: $screen-sm) {
+                display: none;
+            }
+
+            &__img{
+                max-width: 185px;
+            }
+            &__text{
+                font-size: 27px;
+                font-family: $font-monts-medium;
+                color: $title-color;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                writing-mode: vertical-rl;
+                text-orientation: upright;
+                transform: rotateZ(180deg) translate(15%, 15%);
+
+                &:first-letter{
+                    font-size: 52px;
+                }
+            }
+        }
+    }
+}

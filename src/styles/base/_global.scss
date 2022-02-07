@@ -1,0 +1,11 @@
+html{
+    height: 100%;
+}
+body{
+    background-color: $bg-color;
+    height: 100%;
+    overflow: hidden;
+    @media only screen and (max-width: $screen-xxl) {
+        overflow-y: auto;
+    }
+}

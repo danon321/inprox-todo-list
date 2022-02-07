@@ -1,0 +1,11 @@
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tasks > .icon{
+    @media only screen and (max-width: $screen-lg) {
+        display: none;
+    }
+}

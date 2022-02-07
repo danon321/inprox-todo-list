@@ -1,0 +1,65 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: $bg-task-color;
+    box-shadow: 2px 3px 6px #00000029;
+    border-radius: 15px;
+
+    &__title{
+        color: $title-color;
+        text-align: center;
+    }
+
+    &__desc{
+        font-size: 15px;
+        font-family: $font-roboto-light;
+        line-height: 20px;
+        color: $desc-color;
+        text-align: left;
+    }
+
+    &__textarea,
+    &__input{
+        font-size: 18px;
+        font-family: $font-roboto-light;
+        margin: 10px 0;
+        border: none;
+        border-bottom: 1px solid $input-border-color;
+        overflow: auto;
+        outline: none;
+
+        &::placeholder{
+            font-size: 18px;
+            color: $placeholder-color;
+            font-family: $font-roboto-light;
+        }
+
+        /* width */
+        &::-webkit-scrollbar {
+            cursor: pointer;
+            width: 10px;
+        }
+        
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: $scroll-color; 
+            border-radius: 10px;
+        }
+        
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #C63E7C; 
+        }
+    }
+
+    &__input{
+        padding: 5px 0;
+        font-family: $font-monts-medium;
+        color: $title-color;
+    }
+
+    &__textarea{
+        resize: none;
+        color: $placeholder-color;
+    }
+}
