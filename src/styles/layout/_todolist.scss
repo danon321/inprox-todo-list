@@ -1,43 +1,48 @@
 .todolist{
     grid-area: todolist;
     display: grid;
-    grid-template-areas: 
-        "addtask tasks";
-    grid-template-columns: 1fr 1fr;
+    grid-template: "addtask tasks" /auto 1fr;
+    grid-gap: 35px;
     align-self: start;
+    justify-items: flex-end;
+
     @media only screen and (max-width: $screen-lg) {
-        grid-template-areas: 
-        "addtask"
-        "tasks";
-        grid-template-columns: 1fr;
+        grid-template: 
+        "addtask" 1fr
+        "tasks" 1fr
+        / 1fr;
+
+        justify-items: inherit;
+    }
+    @media only screen and (max-width: $screen-sm) {
+        grid-template:
+        "addtask" auto
+        "tasks" 1fr/1fr;
     }
 }
 
 .tasks{
     display: grid;
-    grid-template-areas: 
-        "... ... icon"
-        "... ... ...";
     grid-area: tasks;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 65px;
-    row-gap: 23px;
+    grid-template: "... ... icon" 1fr
+                    "... ... ..." 1fr 
+                    / 1fr 1fr 1fr;
+
+    grid-gap: 23px 65px;
 
     @media only screen and (max-width: $screen-xxl) {
-            column-gap: 40px;
+            column-gap: 20px;
     }
 
     @media only screen and (max-width: $screen-lg) {
         grid-template-areas: none;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
+        grid: auto / 1fr 1fr;
+        align-content: flex-start;
         row-gap: 73px;
     }
 
     @media only screen and (max-width: $screen-sm) {
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
     }
 
     & .icon{

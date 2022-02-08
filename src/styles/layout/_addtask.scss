@@ -10,7 +10,7 @@
         justify-self: center;
     }
 
-    @media only screen and (max-width: $screen-sm) {
+    @media only screen and (max-width: $screen-xs) {
         background: transparent;
         box-shadow: none;
         padding: 0;
@@ -21,7 +21,7 @@
         font-size: 36px;
         font-family: $font-monts-sbold;
         margin-bottom: 65px;
-        @media only screen and (max-width: $screen-sm) {
+        @media only screen and (max-width: $screen-xs) {
             display: none;
         }
     }
@@ -42,24 +42,37 @@
         padding: 15px 105px;
     }
 
+    &.card{
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+
     &__container{
-        display: flex;
+        display: grid;
         position: relative;
         grid-area: addtask;
+        grid: 45px 1fr 45px / 150px 1fr 150px;
+
+        @media only screen and (max-width: $screen-lg) {
+            justify-self: center;
+        }
 
         @media only screen and (max-width: $screen-sm) {
             justify-content: center;
+            grid-template-columns: 1fr;
         }
 
         & .addtask-bg-card{
             display: flex;
             justify-content: center;
             align-items: center;
-            position: absolute;
-            width: 360px;
-            height: 588px;
-            transform: translate(50%, 5%);
+            position: relative;
+            // width: 360px;
+            // height: 588px;
+            // transform: translate(50%, 5%);
             z-index: -1;
+            grid-row: 2/4;
+            grid-column: 2/4;
 
             @media only screen and (max-width: $screen-sm) {
                 display: none;

@@ -63,7 +63,7 @@
         flex-direction: column;
         max-width: 125px;
 
-        @media only screen and (max-width: $screen-sm) {
+        @media only screen and (max-width: $screen-lg) {
             max-width: 80%;
         }
     }

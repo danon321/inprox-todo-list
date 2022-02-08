@@ -16,7 +16,9 @@
         }
         @media only screen and (max-width: $screen-sm) {
             padding: 0 40px;
-            grid-template-columns: 1fr;
+            grid: "header" auto
+            "todolist" 1fr
+            / 1fr;
         }
     }
 }
